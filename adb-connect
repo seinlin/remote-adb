@@ -1,0 +1,8 @@
+#!/bin/bash
+
+[ -z "$1" ] &&  echo "usage: ./adb-connect {remote-ip}" && exit 0
+
+IP=${1}
+ADB=$(dirname `which adb`)
+
+java -jar adbportforward.jar client adblocation=${ADB} remotehost=${IP}

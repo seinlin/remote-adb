@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ADB=$(dirname `which adb`)
+
+java -jar adbportforward.jar server adblocation=${ADB}
